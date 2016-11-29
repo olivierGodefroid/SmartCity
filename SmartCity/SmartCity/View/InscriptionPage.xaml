@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="SmartCity.View.InscriptionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SmartCity.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Source={StaticResource Locator},Path=Inscription}">
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+       
+            <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" x:Name="textBlockConnexion" FontFamily="Segoe Print" HorizontalAlignment="Center" Height="40" TextWrapping="Wrap" Text="Inscription" VerticalAlignment="Center" TextAlignment="Center" FontSize="24"  Grid.ColumnSpan="2"/>
+        <Rectangle Grid.Row="1" Fill="#FFBBBBBB" HorizontalAlignment="Center" Height="450"  Stroke="Black" VerticalAlignment="Center" Width="350" Grid.ColumnSpan="2"/>
+        <Grid HorizontalAlignment="Center" Height="430"  VerticalAlignment="Center" Width="300" Grid.Row="1"  Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+                <RowDefinition ></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="textBlockFirstname" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Prénom" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxFirstname" Grid.Column="1"  TextWrapping="Wrap" Text="Prénom" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockLastname" Grid.Row="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxLastname" Grid.Row="1" Grid.Column="1"  TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockRue" Grid.Row="2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="rue" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxRue" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="Rue" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockLocalite" Grid.Row="3" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Localité" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxLocalité" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="Localité" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockCodePostal" Grid.Row="4" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Code postal" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxCodePostal" Grid.Row="4" Grid.Column="1"  TextWrapping="Wrap" Text="Code postal" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockEmail" Grid.Row="5" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxEmail" Grid.Row="5" Grid.Column="1"  TextWrapping="Wrap" Text="Email" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockMotDePasse" Grid.Row="6" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Mots de passe" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxMotDePasse" Grid.Row="6" Grid.Column="1"  TextWrapping="Wrap" Text="Mots de passe" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockConfirmation" Grid.Row="7" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Confirmation" VerticalAlignment="Top"/>
+            <TextBox x:Name="textBoxConfirmation" Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" Text="Mots de passe" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockTelephone" Grid.Row="8" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Téléphone" VerticalAlignment="Center"/>
+            <TextBox x:Name="textBoxTéléphone" Grid.Row="8" Grid.Column="1"  TextWrapping="Wrap" Text="0496.xx.xx.xx" VerticalAlignment="Top"/>
+            
+            <TextBlock x:Name="textBlockSexe" Grid.Row="9" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Sexe" VerticalAlignment="Bottom"/>
+            <RadioButton Grid.Row="10" GroupName="sexeGrp" >Homme</RadioButton>
+            <RadioButton Grid.Row="10" Grid.Column="1" GroupName="sexeGrp">Femme</RadioButton>
+            <TextBlock x:Name="textBlockDateNaissance" Grid.Row="11" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Date de naissance" VerticalAlignment="Bottom"/>
+            <DatePicker Grid.ColumnSpan="2" HorizontalAlignment="Left"  Grid.Row="12" VerticalAlignment="Top" Margin="0,4.333,0,0"/>
+
+
+        </Grid>
+        <Button  Grid.Row="2" Grid.Column="0" x:Name="buttonConfirmation" Content="S'inscrire" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+        <Button  Grid.Row="2" Grid.Column="1" x:Name="buttonAnnulation" Content="Annulé" HorizontalAlignment="Center"  VerticalAlignment="Center"/>
+
+    </Grid>
+</Page>

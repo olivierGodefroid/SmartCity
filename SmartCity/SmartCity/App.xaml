@@ -1,0 +1,28 @@
+﻿<Application
+    x:Class="SmartCity.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SmartCity.Converter"
+    xmlns:vm="using:SmartCity.ViewModel"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    RequestedTheme="Light">
+
+
+    <Application.Resources>
+        <vm:ViewModelLocator x:Key="Locator"/>
+        <local:LabelToNewImage x:Key="Image"/>
+        <DataTemplate x:Key="menuTemplate">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Width="50" Height="50" Source="{Binding Label,Converter={StaticResource Image}}" HorizontalAlignment="Left"/>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Label}" VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+
+
+    </Application.Resources>
+    
+</Application>
