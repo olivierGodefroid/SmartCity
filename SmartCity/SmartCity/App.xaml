@@ -21,6 +21,33 @@
                 <TextBlock Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Label}" VerticalAlignment="Center"/>
             </Grid>
         </DataTemplate>
+        <DataTemplate x:Key="friendItemList">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Grid.Row="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding LastName}" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding FirstName}" VerticalAlignment="Center"/>
+                    <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Localisé : " VerticalAlignment="Center"/>
+
+                    <TextBlock Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Depuis : " VerticalAlignment="Center"/>
+
+                </Grid>
+                <Button  Grid.Column="1" x:Name="ButtonInvite" Content="Invite" HorizontalAlignment="Center"  VerticalAlignment="Center"  Width="125"  Background="#66FFFFFF" FontFamily="Segoe Print" Command="{Binding GoToMapPageCommand}"/>
+            </Grid>
+        </DataTemplate>
 
 
     </Application.Resources>

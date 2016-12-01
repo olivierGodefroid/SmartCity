@@ -20,6 +20,7 @@ namespace SmartCity.ViewModel
             SimpleIoc.Default.Register<ConnectionPageViewModel>();
             SimpleIoc.Default.Register<MapPageViewModel>();
             SimpleIoc.Default.Register<InscriptionPageViewModel>();
+            SimpleIoc.Default.Register<FriendPageViewModel>();
             NavigationService navigationPages = new NavigationService();
             SimpleIoc.Default.Register<INavigationService>(() => navigationPages);
 
